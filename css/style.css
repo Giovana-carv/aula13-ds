@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 1.6;
+    background: #f4f4f4;
+    color: #333;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+}
+
+header {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+nav {
+    background: #1b263b;
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4cc9f0;
+}
+
+.container-home {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "nav"
+        "hero"
+        "conteudo"
+        "footer";
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.destaques {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    padding: 15px;
+}
+
+.card p {
+    padding: 0 15px 15px;
+}
+
+.detalhe {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 30px;
+}
+
+.imagem-detalhe img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.info-detalhe {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.info-detalhe h2 {
+    margin-bottom: 20px;
+}
+
+.info-detalhe p {
+    margin-bottom: 15px;
+}
+
+.sobre-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+.bloco {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.bloco h2 {
+    margin-bottom: 15px;
+}
+
+.titulo-pagina {
+    text-align: center;
+    padding: 30px;
+}
+
+footer {
+    background: #0d1b2a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+@media(max-width:768px) {
+
+    .destaques {
+        grid-template-columns: 1fr;
+    }
+
+    .detalhe {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+}
